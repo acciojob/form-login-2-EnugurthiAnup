@@ -12,4 +12,4 @@ form.addEventListener('submit', function(e) {
         `First Name: ${first} Last Name: ${last} Phone Number: ${phone} Email ID: ${mail}`
     );
 });
-cy.get('form').submit();
+// cy.get('form').submit();
