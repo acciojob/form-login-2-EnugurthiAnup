@@ -1,16 +1,15 @@
-let first = document.querySelector('#firstname');
-let last = document.querySelector('#lastname');
-let phone = document.querySelector('#num');
-let mail = document.querySelector('#mail');
-let sub = document.querySelector('#submit');
+let form = document.getElementById('myForm');
 
-sub.addEventListener('click', () => {
-    // stop form reload
-    
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let first = document.querySelector('#firstname').value;
+    let last = document.querySelector('#lastname').value;
+    let phone = document.querySelector('#num').value;
+    let mail = document.querySelector('#mail').value;
+
     alert(
-        `First Name: ${first.value}` +
-        `Last Name: ${last.value}` +
-        `Phone Number: ${phone.value}` +
-        `Email ID: ${mail.value}`
+        `First Name: ${first} Last Name: ${last} Phone Number: ${phone} Email ID: ${mail}`
     );
 });
+cy.get('form').submit();
